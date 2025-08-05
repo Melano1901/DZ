@@ -22,7 +22,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
     mode === 'development' && componentTagger(),
-    VitePWA({
+    mode === 'production' && VitePWA({
       registerType: 'autoUpdate',
       manifest: {
         name: 'Dalil.dz - Plateforme Juridique Algérienne',
