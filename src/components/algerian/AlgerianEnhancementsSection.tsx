@@ -42,7 +42,8 @@ export function AlgerianEnhancementsSection({ language = "fr" }: AlgerianEnhance
   const [activeFeature, setActiveFeature] = useState<string>('rtl');
 
   return (
-    <div className="space-y-6">
+    <RTLProvider>
+      <div className="space-y-6">
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
@@ -188,5 +189,6 @@ export function AlgerianEnhancementsSection({ language = "fr" }: AlgerianEnhance
         </CardContent>
       </Card>
     </div>
+    </RTLProvider>
   );
 }
